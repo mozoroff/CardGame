@@ -1,4 +1,4 @@
-class Card(private val suit: String, private val value: String, private var intValue: Int ) {
+class Card(private val suit: String, private val value: String, var intValue: Int ) {
     // トランプアプリを開発していきます。ここでは21を開発しますが、
     // どのトランプゲームでも組み込めるような設計にします。
     // まずは1枚分のカードを表すクラスCardを生成しましょう。

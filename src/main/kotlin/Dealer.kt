@@ -35,6 +35,15 @@ object Dealer {
             println()
         }
     }
-
+    // 各プレーヤーの手札を受け取って、合計値を計算するscore21Individualメソッドを作成します。
+    // ブラックジャックでは値の合計値が21を超えるとNGなのでその場合は0とします。
+    fun score21Individual(cards: ArrayList<Card>): Int{
+        var value: Int = 0
+        for(i in 0 until cards.size){
+            value += cards[i].intValue
+        }
+        if(value > 21) value = 0
+        return value
+    }
 
 }
