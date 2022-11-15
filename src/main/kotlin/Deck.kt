@@ -1,3 +1,5 @@
+import kotlin.math.floor
+
 class Deck {
     var deck :ArrayList<Card> = arrayListOf()
     init{
@@ -19,11 +21,24 @@ class Deck {
             return newDeck
         }
     }
-        fun printDeck(){
-            println("Displaying cards...")
-            for(i in 0  until  deck.size){
-                println(deck.get(i).getCardString())
-            }
+    fun printDeck(){
+        println("Displaying cards...")
+        for(i in 0  until  deck.size){
+            println(deck[i].getCardString())
         }
-
+    }
+    // シャッフルする関数はtwo pointerを活用します。for文で一つ一つのカードをランダムに入れ替える処理を書きましょう。
+    fun shuffleDeck(){
+        for(i in deck.size - 1 downTo 0) {
+            val j: Int = floor(Math.random() * i + 1).toInt()
+            val temp: Card = deck[i]
+            deck[i] = deck[j]
+            deck[j] = temp
+        }
+    }
+    //カードをドロー
+    fun draw(): Card{
+        //最後の一枚をpop
+        return deck.removeAt(deck.size - 1)
+    }
 }
