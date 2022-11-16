@@ -1,2 +1,1 @@
-class Table(val amountOfPlayers: Int, val gameMode: String) {
-}
+class Table constructor(val amountOfPlayers: Int, val gameMode: String)

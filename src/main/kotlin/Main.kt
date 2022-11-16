@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val arr1: IntArray = intArrayOf(1, 9, 19, 3, 4, 6)
+    println(HelpFunctions.maxInArrayIndex(arr1))
+    val arr2: IntArray = intArrayOf(5, 2, 1, 3, 5, 5)
+    println(HelpFunctions.maxInArrayIndex(arr2))
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
 }
